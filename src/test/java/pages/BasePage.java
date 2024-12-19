@@ -64,6 +64,11 @@ public class BasePage {
         BuscarElementos(localizador).submit();
     }
 
+    //Obtener Texto
+    public String ObtenerTexto(String localizador){
+        return BuscarElementos(localizador).getText();
+    }
+
     //Dropdown
     //Por Valor
     public void SelectFromDropdownByValue(String localizador, String value){
