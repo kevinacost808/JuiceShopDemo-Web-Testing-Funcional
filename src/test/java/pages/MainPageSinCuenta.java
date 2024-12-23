@@ -10,7 +10,13 @@ public class MainPageSinCuenta extends BasePage{
         super(driver);
     }
 
-    
+    public void clickCuenta(){
+        ClickElemento(cuenta);
+    }
+
+    public void clickLogin(){
+        ClickElemento(login);
+    }
 
 
 }
