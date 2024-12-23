@@ -1,19 +1,22 @@
 package pages;
 
-import java.util.List;
-
 public class RegistrarPage extends BasePage{
 
     private String xpathEmail = "//input[@id='emailControl']";
     private String xpathPassword = "//input[@id='passwordControl']";
     private String xpathConfirmarPassword = "//input[@id='repeatPasswordControl']";
-    private String xpathdropdownQuestion = "//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c30-15 ng-star-inserted']";
+    private String xpathdropdownQuestion = "/html[1]/body[1]/app-root[1]/div[1]/mat-sidenav-container[1]/mat-sidenav-content[1]/app-register[1]/div[1]/mat-card[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[3]";
+    private String valueQuestion = "/html[1]/body[1]/div[4]/div[2]/div[1]/div[1]/div[1]/mat-option[2]/span[1]";
     private String xpathAnswer = "//input[@id='securityAnswerControl']";
     private String buttonRegister = "//button[@id='registerButton']//span[@class='mat-button-wrapper']";
     private String mensajeRegister = "//span[@class='mat-simple-snack-bar-content']";
 
     public RegistrarPage(){
         super(driver);
+    }
+
+    public void navegarPaginaRegistrar(){
+        NavegarA("https://demo.owasp-juice.shop/#/register");
     }
 
     public void escribirEmail(String txtEmail){
@@ -24,12 +27,16 @@ public class RegistrarPage extends BasePage{
         Escribir(xpathPassword, password);
     }
 
-    public void repetirPassword(String confirmPassword){
+    public void confirmarPassword(String confirmPassword){
         Escribir(xpathConfirmarPassword, confirmPassword);
     }
 
-    public void elegirQuestionValor(String question){
-        SelectFromDropdownByValue(xpathdropdownQuestion, question);
+    public void clickMatSelect(){
+        ClickElemento(xpathdropdownQuestion);
+    }
+
+    public void elegirQuestionValor(){
+        SelectFromDropdownByIndex(valueQuestion, 2);
     }
 
     public void escribirAnswer(String answer){
@@ -40,7 +47,7 @@ public class RegistrarPage extends BasePage{
         ClickElemento(buttonRegister);
     }
 
-    public void obtenerMensajeRegistro(){
-        ObtenerTexto(mensajeRegister);
+    public String obtenerMensajeRegistro(){
+        return ObtenerTexto(mensajeRegister);
     }
 }

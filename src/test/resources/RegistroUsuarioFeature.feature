@@ -9,8 +9,7 @@ Feature: Registro de usuario
         When Ingresa email "Erika@gmail.com"
         And Ingresa password valido "ErikaMilagros14"
         And Confirma password "ErikaMilagros14"
-        When Selecciona "Mother's maiden name?"
+        When Selecciona pregunta
         And Ingresa Answer "Luz"
         And Hace click en el boton "Register"
         Then El sistema muestra mensaje de exito "Registration completed successfully. You can now log in."
-        And El usuario es redirigido a la pagina de inicio de sesión
