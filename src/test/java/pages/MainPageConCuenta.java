@@ -13,7 +13,7 @@ public class MainPageConCuenta extends BasePage{
         ClickElemento(cajaCuenta);
     }
 
-    public void extraerEmail(){
-        ObtenerTexto(cajaEmail);
+    public String extraerEmail(){
+        return ObtenerTexto(cajaEmail);
     }
 }

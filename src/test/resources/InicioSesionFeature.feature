@@ -12,5 +12,5 @@ Feature: Inicio de sesion
         When Ingresa Email "kevin@gmail.com"
         And Ingresa password "12345678"
         And Hace click en el boton Log in
-        And Hace click en "Account"
+        And Hace click en Account
         Then El sistema muestra panel principal el email del usuario "kevin@gmail.com"
