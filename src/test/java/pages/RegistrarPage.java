@@ -10,9 +10,17 @@ public class RegistrarPage extends BasePage{
     private String xpathAnswer = "//input[@id='securityAnswerControl']";
     private String buttonRegister = "//button[@id='registerButton']//span[@class='mat-button-wrapper']";
     private String mensajeRegister = "//span[@class='mat-simple-snack-bar-content']";
+    private String boton1 = "/html/body/div[1]/div/a";
+    private String boton2 = "//*[@id=\"mat-dialog-0\"]/app-welcome-banner/div/div[2]/button[2]";
 
     public RegistrarPage(){
         super(driver);
+    }
+
+    
+    public void eliminarDistractores(){
+        ClickElemento(boton1);
+        ClickElemento(boton2);
     }
 
     public void navegarPaginaRegistrar(){

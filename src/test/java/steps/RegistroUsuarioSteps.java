@@ -15,6 +15,7 @@ public class RegistroUsuarioSteps{
     @Given("El usuario está en la pagina de registro")
     public void navegarPaginaRegistrar(){
         registrarPage.navegarPaginaRegistrar();
+        registrarPage.eliminarDistractores();
     }
 
     @When("Ingresa email {string}")
