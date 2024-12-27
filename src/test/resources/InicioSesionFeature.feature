@@ -14,3 +14,11 @@ Feature: Inicio de sesion
         And Hace click en el boton Log in
         And Hace click en Account
         Then El sistema muestra panel principal el email del usuario "kevin@gmail.com"
+
+    @Sesionfallida
+    Scenario: Inicio de sesion con credenciales incorrectas    
+        Given El usuario está en la página Login
+        When Ingresa email correcto "kevin@gmail.com"
+        And Ingresa password incorrecto "12345678"
+        And Hace click en el boton Log in
+        Then El sistema muestra un mensaje de error ""

@@ -10,6 +10,10 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+    public void navegarPagina(){
+        NavegarA("https://demo.owasp-juice.shop/#/login");
+    }
+
     public void escribirEmail(String email){
         Escribir(txtEmail, email);
     }
