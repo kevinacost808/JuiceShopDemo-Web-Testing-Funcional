@@ -21,4 +21,4 @@ Feature: Inicio de sesion
         When Ingresa email correcto "kevin@gmail.com"
         And Ingresa password incorrecto "1234567"
         And Hace click en el boton Log in
-        Then El sistema muestra un mensaje de error ""
+        Then El sistema muestra un mensaje de error "usuario o contraseña incorrecta"
