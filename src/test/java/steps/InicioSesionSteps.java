@@ -56,6 +56,12 @@ public class InicioSesionSteps {
         assertEquals(emailEsperado, emailActual);
     }
 
+    @Given("El usuario está en la página Login")
+    public void pageLogin(){
+        loginPage.navegarPagina();
+        loginPage.eliminarDistractores();
+    }
+
     @When("Ingresa email correcto {string}")
     public void emailCorrecto(String email){
         loginPage.escribirEmail(email);

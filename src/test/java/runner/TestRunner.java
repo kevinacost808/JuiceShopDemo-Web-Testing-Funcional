@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
     features = "src\\test\\resources",
     glue = "steps",
     plugin = {"pretty", "html:target/cucumber-reports"},
-    tags = "@SesionFallida"
+    tags = "@Sesionfallida"
 )
 public class TestRunner {
 
