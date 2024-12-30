@@ -19,6 +19,6 @@ Feature: Inicio de sesion
     Scenario: Inicio de sesion con credenciales incorrectas    
         Given El usuario está en la página Login
         When Ingresa email correcto "kevin@gmail.com"
-        And Ingresa password incorrecto "12345678"
+        And Ingresa password incorrecto "1234567"
         And Hace click en el boton Log in
         Then El sistema muestra un mensaje de error ""

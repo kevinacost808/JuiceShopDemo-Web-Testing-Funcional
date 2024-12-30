@@ -56,4 +56,24 @@ public class InicioSesionSteps {
         assertEquals(emailEsperado, emailActual);
     }
 
+    @When("Ingresa email correcto {string}")
+    public void emailCorrecto(String email){
+        loginPage.escribirEmail(email);
+    }
+
+    @And("Ingresa password incorrecto {string}")
+    public void passwordIncorrecto(String password){
+        loginPage.escribirPassword(password);
+    }
+
+    @Then("El sistema muestra un mensaje de error {string}")
+    public void alertaMensaje(String mensajeErrorEsperado){
+        String mensajeActual = loginPage.mensajeError();
+    
+        if(mensajeActual.isEmpty()){
+            mensajeActual = "No hay error";
+        }
+
+        assertEquals(mensajeErrorEsperado, mensajeActual);
+    }
 }
