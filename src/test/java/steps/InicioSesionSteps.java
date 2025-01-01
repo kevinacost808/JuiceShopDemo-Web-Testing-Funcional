@@ -56,6 +56,12 @@ public class InicioSesionSteps {
         assertEquals(emailEsperado, emailActual);
     }
 
+    @And("El usuario cierra sesion")
+    public void cerrarSesion(){
+        mPageConCuenta.clickCuenta();
+        mPageConCuenta.clickLogout();
+    }
+
     @Given("El usuario está en la página Login")
     public void pageLogin(){
         loginPage.navegarPagina();
@@ -82,4 +88,6 @@ public class InicioSesionSteps {
 
         assertEquals(mensajeErrorEsperado, mensajeActual);
     }
+
+
 }
