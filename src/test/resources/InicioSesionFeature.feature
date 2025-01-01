@@ -5,7 +5,7 @@ Feature: Inicio de sesion
     quiero acceder a las funciones,
     y realizar compras
 
-    @Sesionfallida
+    @SesionFallida
     Scenario: Inicio de sesion con credenciales incorrectas    
         Given El usuario está en la página Login
         When Ingresa email correcto "kevin@gmail.com"
